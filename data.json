@@ -1,5 +1,5 @@
 
-	{
+{{
     title:"Believer",
     author:"Imagine Dragons",
     imageSource:'https://cdns-images.dzcdn.net/images/cover/8c2b76ea4469af6386e542435fa578f1/500x500.jpg',
@@ -29,4 +29,5 @@
     url:'https://drive.google.com/uc?export=open&id=1xUqYCLzizjWnNvZFRoaWEJrTgRNKWvSx',
     id:'4'
   },
+}
 
