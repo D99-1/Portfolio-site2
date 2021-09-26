@@ -1,33 +1,32 @@
-
-'a'{
-    title:"Believer",
-    author:"Imagine Dragons",
-    imageSource:'https://cdns-images.dzcdn.net/images/cover/8c2b76ea4469af6386e542435fa578f1/500x500.jpg',
-    url:'https://drive.google.com/uc?export=open&id=1EssId8qNd7PlSaxt90qYhmmzgxMcVL9-',
-    id:'1',
-    duration: 324,
+[
+  {
+    "title": "Believer",
+    "author": "Imagine Dragons",
+    "imageSource": "https://cdns-images.dzcdn.net/images/cover/8c2b76ea4469af6386e542435fa578f1/500x500.jpg",
+    "url": "https://drive.google.com/uc?export=open&id=1EssId8qNd7PlSaxt90qYhmmzgxMcVL9-",
+    "id": "1",
+    "duration": 324
   },
-  'b'{
-    title:"Permission To Dance",
-    author:'BTS',
-    imageSource:'https://upload.wikimedia.org/wikipedia/en/0/04/BTS_-_Permission_to_Dance.png',
-    url:'http://soundbible.com/grab.php?id=2217&type=mp3',
-    id:'2',
-    duration:307,
+  {
+    "title": "Permission To Dance",
+    "author": "BTS",
+    "imageSource": "https://upload.wikimedia.org/wikipedia/en/0/04/BTS_-_Permission_to_Dance.png",
+    "url": "http://soundbible.com/grab.php?id=2217&type=mp3",
+    "id": "2",
+    "duration": 307
   },
-  'c'{
-    title:"Never Gonna Give You Up",
-    author:'Rick Astley',
-    imageSource:'https://images.genius.com/fbae2395aa24a0795670643d31d9ffc2.718x720x1.jpg',
-    url:'https://drive.google.com/uc?export=open&id=1Ssq2Ly-eJ4DWY-R8ITeHDeIijgD8Ijqf',
-    id:'3'
+  {
+    "title": "Never Gonna Give You Up",
+    "author": "Rick Astley",
+    "imageSource": "https://images.genius.com/fbae2395aa24a0795670643d31d9ffc2.718x720x1.jpg",
+    "url": "https://drive.google.com/uc?export=open&id=1Ssq2Ly-eJ4DWY-R8ITeHDeIijgD8Ijqf",
+    "id": "3"
   },
-  'd'{
-    title:'Butter',
-    author:'BTS',
-    imageSource:'https://upload.wikimedia.org/wikipedia/en/d/db/BTS_-_Butter.png',
-    url:'https://drive.google.com/uc?export=open&id=1xUqYCLzizjWnNvZFRoaWEJrTgRNKWvSx',
-    id:'4'
-  },
-}
-
+  {
+    "title": "Butter",
+    "author": "BTS",
+    "imageSource": "https://upload.wikimedia.org/wikipedia/en/d/db/BTS_-_Butter.png",
+    "url": "https://drive.google.com/uc?export=open&id=1xUqYCLzizjWnNvZFRoaWEJrTgRNKWvSx",
+    "id": "4"
+  }
+]
