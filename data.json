@@ -4,7 +4,7 @@
     "author": "Rick Astley",
     "imageSource": "https://images.genius.com/fbae2395aa24a0795670643d31d9ffc2.718x720x1.jpg",
     "url": "https://drive.google.com/uc?export=open&id=1Ssq2Ly-eJ4DWY-R8ITeHDeIijgD8Ijqf",
-    "id": "3"
+    "id": "0"
   },
   "1": {
     "title": "Believer",
@@ -18,7 +18,7 @@
     "title": "Permission To Dance",
     "author": "BTS",
     "imageSource": "https://upload.wikimedia.org/wikipedia/en/0/04/BTS_-_Permission_to_Dance.png",
-    "url": "http://soundbible.com/grab.php?id=2217&type=mp3",
+    "url": "https://drive.google.com/uc?export=open&id=1us0J1sWL-08C2h6_4TilCxvP6BrYslmH",
     "id": "2",
     "duration": 307
   },
@@ -27,6 +27,34 @@
     "author": "BTS",
     "imageSource": "https://upload.wikimedia.org/wikipedia/en/d/db/BTS_-_Butter.png",
     "url": "https://drive.google.com/uc?export=open&id=1xUqYCLzizjWnNvZFRoaWEJrTgRNKWvSx",
+    "id": "3"
+  },
+    "4": {
+    "title": "Dynamite",
+    "author": "BTS",
+    "imageSource": "https://static.wikia.nocookie.net/the-bangtan-boys/images/9/9a/Dynamite_Cover_%28Daytime%29.jpg/revision/latest?cb=20200917234900",
+    "url": "https://drive.google.com/uc?export=open&id=19OlGf5n7uXGRZpVFz7IG4jYZAONjQDa0",
     "id": "4"
-  }
+  },
+    "5": {
+    "title": "Pump It Up",
+    "author": "Endor",
+    "imageSource": "https://img.discogs.com/HrskUfPJpeJrvGav69tvJoySYk0=/fit-in/600x600/filters:strip_icc():format(webp):mode_rgb():quality(90)/discogs-images/R-14169468-1569156941-2234.jpeg.jpg",
+    "url": "https://drive.google.com/uc?export=open&id=1OsYrJKr0jLalvu__KMW9UnMi3Gj9xKpm",
+    "id": "5"
+  },
+    "6": {
+    "title": "One Thing Right",
+    "author": "Kane Brown, Marshmello",
+    "imageSource": "https://i.ytimg.com/vi/0lm7l7O3mIE/maxresdefault.jpg",
+    "url": "https://drive.google.com/uc?export=open&id=13o7Ys9mQM2tO7lGwMsQCQq8dgbnVccwd",
+    "id": "6"
+  },
+    "7": {
+    "title": "Can't Stop The Feeling",
+    "author": "Justin Timberlake",
+    "imageSource": "https://upload.wikimedia.org/wikipedia/en/2/21/Justin_Timberlake_-_Can%27t_Stop_the_Feeling.png",
+    "url": "https://drive.google.com/uc?export=open&id=1SB7E8Lrgm0zCln5WiDT_dsb0oLvw91sH",
+    "id": "7"
+  },
 }
