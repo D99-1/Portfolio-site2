@@ -45,6 +45,8 @@ sr.reveal('.stats-item', ops);
 // Projects
 
 const container = document.querySelector('.project-content');
+const mContainer = document.querySelector('.m-project-content');
+
 projects.forEach((project) => {
 	container.innerHTML +=
 		`<div class="card">
@@ -57,10 +59,16 @@ projects.forEach((project) => {
 			</div>
   		</div>`
 })
+projects.forEach((project) => {
+	mContainer.innerHTML +=
+`<div class="card">
+  <label for="collapsible" class="lbl-toggle">${project.name}</label>
+</div>`
+})
 
 
 // Blob
-const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), antialias: true });
+/*const renderer = new THREE.WebGLRenderer({ canvas: document.getElementById('canvas'), antialias: true });
 renderer.setPixelRatio(window.devicePixelRatio);
 renderer.setSize(452, 250);
 const scene = new THREE.Scene();
@@ -87,7 +95,7 @@ function animate() {
 	requestAnimationFrame(animate);
 }
 requestAnimationFrame(animate);
-
+*/
 // Nav
 
 const links = document.querySelectorAll(".nav-link");
@@ -126,93 +134,11 @@ hamburger.addEventListener('click', function () {
 
 
 // Typing animation
-var typingElement = document.querySelector(".typing-text");
-var typeArray = [ "JavaScript", "NodeJS","React Native","HTML", "CSS","Python"];
-var index = 0,
-  isAdding = true,
-  typeIndex = 0;
+var typing=new Typed(".typing-text", {
+  strings: [ "JavaScript", "NodeJS","React Native","HTML", "CSS","Python"],
+  typeSpeed: 80,
+  backSpeed: 75,
+  loop: true,
+  backDelay: 500,
 
-function playAnim() {
-  setTimeout(
-    function () {
-      typingElement.innerText = typeArray[typeIndex].slice(0, index);
-      /*
-        This line handles both typing and removing text
-        typeArray[typeIndex] selects the text from array
-        slice(0, index) selects the part of that text
-
-        Examples:
-
-        typeIndex = 0     => First Text
-        index = 0         => First Letter of the Text
-        Result is "H"
-
-        typeIndex = 0
-        index = 1
-        Result is "HT"    => First 2 Letters of the Text
-
-        typeIndex = 0
-        index = 2
-        Result is "HTM"   => First 3 Letters of the Text
-
-        typeIndex = 0
-        index = 3
-        Result is "HTML"  =>  Text typed completely, start to remove by decreasing index
-                              While removing, index will be: 2,1,0 . After 0, move on to next text. 
-
-        typeIndex = 1     => Second Text                   
-        index = 0
-        Result is "C"
-
-        typeIndex = 1
-        index = 1
-        Result is "CS"
-
-        typeIndex = 1
-        index = 2
-        Result is "CSS"
-      */
-
-      // If typing
-      if (isAdding) {
-        if (index >= typeArray[typeIndex].length) {
-          isAdding = false;
-          // If text typed completely, wait 2s before starting to remove it.
-          setTimeout(function () {
-            playAnim();
-          }, 3000);
-          return;
-        } else {
-          // Continue to typing text by increasing index
-          index++;
-        }
-      } else {
-        // If removing
-        if (index === 0) {
-          isAdding = true;
-          //If text removed completely, move on to next text by increasing typeIndex
-          typeIndex++;
-          if (typeIndex >= typeArray.length) {
-            // Turn to beginning when reached to last text
-            typeIndex = 0;
-          }
-        } else {
-          // Continue to removing text by decreasing index
-          index--;
-        }
-      }
-      // Call the function always
-      playAnim();
-    },
-
-    /* 
-      If typing text, call it every 120ms
-      If removing text, call it every 60ms
-      Type slower, remove faster
-    */
-    isAdding ? 120 : 120
-  );
-}
-
-// Start typing text
-playAnim();
+});

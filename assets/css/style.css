@@ -170,21 +170,7 @@ body {
     font-size: 120px;
     z-index: -1;
 }
-.typing-text::after {
-  content: "|";
-  animation: blink 1s step-end infinite;
-}
 
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 1;
-  }
-
-  50% {
-    opacity: 0;
-  }
-}
 .hero-button {
     padding: 0 25px 0 25px;
     border-radius: 5px;
@@ -402,6 +388,18 @@ body {
     transition: border 0.3s ease, transform 0.3s ease;
   }
 
+  .min-card {
+    border-radius: 16px;
+    box-shadow: 0 0 14px rgb(255 255 255 / 12%);
+    max-width: 260px;
+    width:100%;
+    display: flex;
+    background: #000;
+    border: 1px solid #333;
+    margin: 30px 20px;
+    transition: border 0.3s ease, transform 0.3s ease;
+  }
+
   .card:hover {
     border: 1px solid rgb(49,91,250);
     cursor: pointer;
@@ -410,9 +408,17 @@ body {
 
   .card-content {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     flex-direction: column;
     min-height: 100%;
+  }
+
+  .card-min-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    padding: 20px;
+
   }
   
   .card img {
@@ -425,6 +431,13 @@ body {
     font-size: 32px;
     font-weight: 700;
     color: #fff
+  }
+
+  .card-min-heading {
+    font-size: 32px;
+    font-weight: 700;
+    color: #fff;
+    float: start;
   }
   
   .card-description {
@@ -517,6 +530,18 @@ body {
 .typing {
   font-size: 32px;
 }
+
+
+
+.lbl-toggle {
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.25s ease-out;
+
+}
+
 
 /* Media Query */
 
