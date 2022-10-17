@@ -49,7 +49,7 @@ const mContainer = document.querySelector('.m-project-content');
 
 projects.forEach((project) => {
 	container.innerHTML +=
-		`<div class="card">
+		`<div class="card" onClick="">
 			<div class="card-content">
 			<h3 class="card-heading">${project.name}</h3>
 			<p class="card-description">${project.description}</p>
@@ -61,10 +61,43 @@ projects.forEach((project) => {
 })
 projects.forEach((project) => {
 	mContainer.innerHTML +=
-`<div class="card">
+`
+
+<div class="card" id="${project.name}" onClick="clicked(this)">
   <label for="collapsible" class="lbl-toggle">${project.name}</label>
-</div>`
+  </div>
+
+`
 })
+function clicked(elem){
+	let id = elem.id
+	let item = document.getElementById(id)
+	let rawData = projects.find(({ name }) => name === id);
+	let extended = `
+	<div class="card-content" id="${rawData.name}-unCollapsed">
+	<div style="display="flex"; flex-direction="row"">
+	<h3 class="card-heading">${rawData.name} </h3>
+	</div>
+	<p class="card-description">${rawData.description}</p>
+	<div class="buttons">
+	  <button onclick="window.open('${rawData.url}', '_blank')" class="card-button">Visit&nbsp;<i class="fa-solid fa-arrow-up-right-from-square"></i></button>
+	</div>
+	</div>
+  `
+  let short = `
+	<label for="collapsible" class="lbl-toggle">${rawData.name}</label>
+  `
+  const uncollap = document.getElementById(`${rawData.name}-unCollapsed`)
+	if (uncollap){
+	item.innerHTML = short
+	} else{
+		item.innerHTML = extended
+	}
+
+
+}
+
+
 
 
 // Blob
