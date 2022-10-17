@@ -42,6 +42,7 @@ sr.reveal('.icon', ops);
 sr.reveal(".about-title, .about-img, .about-text, .about-description.grey", ops);
 sr.reveal('.stats-item', ops);
 sr.reveal('.project-content, .m-project-content',ops);
+sr.reveal('.card',ops)
 
 // Projects
 
