@@ -1,11 +1,11 @@
-const { express } = require('./xtra-express-documatic-hackathon/index')
+const express = require('express');
 const app = express();
 app.set('view engine', 'ejs')
 require('dotenv').config()
 
-app.use(express.static('xtra-express'))
+//app.use(express.static('xtra-express'))
 app.use(express.static('./'))
-express.init(['index'])
+//express.init(['index'])
 
 
 
@@ -20,8 +20,8 @@ app.get('/Dhyan99/bgScreen', async (req, res) => {
 }
 );
 
-app.get('/Dhyan99/views', async (req, res) => {
+/*app.get('/Dhyan99/views', async (req, res) => {
     res.render('xtra-express/index')
-})
+})*/
 
 app.listen(process.env.PORT);
