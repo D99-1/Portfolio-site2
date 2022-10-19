@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+         <html lang="en">
+         <head>
+             <meta charset="UTF-8">
+             <meta http-equiv="X-UA-Compatible" content="IE=edge">
+             <meta name="viewport" content="width=device-width, initial-scale=1.0">
+             <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+             <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+             <title>index Views</title>
+         </head>
+         <body>
+         <style>
+          #chart_div{
+            height: 1000px
+          }
+         </style>
+          <div id="chart_div"></div>
+             <script>
+                let fullKeys
+                let fullVals
+                let keys
+                let vals
+
+
+
+                 $.getJSON('/index/views.json', function(data) {
+                     console.log(data)
+                      fullKeys = Object.keys(data.time) // => ['a','b','c']
+                      fullVals = Object.values(data.time) // => [1,2,3]
+                      keys = fullKeys.slice(-30)
+                      vals = fullVals.slice(-30)
+                        console.log(keys.toString())
+                        const keysWrappedInQuotes = keys.map(key => "'"+key+"'");
+                        const finalKeys = keysWrappedInQuotes.join(',')
+                        google.charts.load('current', {packages: ['corechart', 'line']});
+                        google.charts.setOnLoadCallback(drawBasic);
+                        function drawBasic() {
+                        
+                          var data = new google.visualization.DataTable();
+                          data.addColumn('string', 'Date');
+                          data.addColumn('number', 'Views');
+                        
+                          for(i = 0; i < keys.length; i++)
+                            data.addRow([keys[i], vals[i]]);
+                        
+                          new google.visualization.LineChart(document.getElementById('chart_div')).
+                            draw(data, {legend:"none"});
+                        }
+                      
+                 })
+             </script>
+         </body>
+         </html>
