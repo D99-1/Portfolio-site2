@@ -1,4 +1,4 @@
-const { express } = require('./xtra-express-documatic-hackathon/index')
+const { express } = require('./xtra-express-documatic-hackathon/index.js')
 const app = express();
 app.set('view engine', 'ejs')
 
