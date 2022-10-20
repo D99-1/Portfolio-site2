@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Dhyan99's Portfolio</title>
+  <link rel="shortcut icon" href="/assets/img/img.jpeg" type="image/jpeg">
   <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="assets/css/util.css">
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -22,7 +23,7 @@
   <meta name="language" content="English">
   <meta name="author" content="Dhyan99">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://dhyan99.is-a.dev">
+  <meta property="og:url" content="https://d99-1.github.io">
   <meta property="og:title" content="Dhyan99">
   <meta property="og:description" content="This is my portfolio showcasing many of the projects I have made!">
   <meta property="og:image" content="/assets/img/img.jpeg">
@@ -31,6 +32,7 @@
 </head>
 
 <body>
+  <div id="body">
   <nav id='nav' style="width: 100vw; backdrop-filter: blur(5px); box-shadow: inset 0 -1px 0 0 hsla(0,0%,100%,0.1)">
     <div class="nav-container-custom nav-wrapper">
       <div class="brand">
@@ -43,11 +45,11 @@
         <span></span>
         <span></span>
       </div>
-      <ul class="nav-list">
+      <ul class="nav-list" data-unselectable="unselectable content">
         <li><a class="nav-link" data-scroll="#home">Home</a></li>
         <li><a class="nav-link" data-scroll="#about">About</a></li>
         <li><a class="nav-link" data-scroll="#projects">Projects</a> </li>
-        <li><a class="nav-link" target="_blank" href="https://buymeacoffee.com/Dhyan99">Donate</a>
+        <li><a class="nav-link" target="_blank" href="https://ko-fi.com/dhyan99">Donate</a>
         </li>
       </ul>
     </div>
@@ -130,7 +132,10 @@
       });
     }
   </script>
-<script data-name="BMC-Widget" class="shine" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Dhyan99" data-description="Support me on Buy me a coffee!" data-message="Support Me By Leaving A Small Donation" data-color="#5F7FFF" data-position="Left" data-x_margin="18" data-y_margin="18"></script>
+
+
+<script data-name="BMC-Widget" classList="shine" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Dhyan99" data-description="Support me on Buy me a coffee!" data-message="Support Me By Leaving A Small Donation" data-color="#5F7FFF" data-position="Left" data-x_margin="18" data-y_margin="18"></script>
+</div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js" integrity="sha512-BdHyGtczsUoFcEma+MfXc71KJLv/cd+sUsUaYYf2mXpfG/PtBjNXsPo78+rxWjscxUYN2Qr2+DbeGGiJx81ifg==" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r98/three.js"></script>
@@ -146,7 +151,15 @@
   <script src="assets/js/particles.min.js"></script>
   <script src="assets/js/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-
+<script>
+    $(document).ready(function(){ 
+    $('#body').load("index.html", function(){
+       $('#bmc-wbtn').addClass('wgt-shine')
+    });
+}); 
+ // var element = document.getElementById("bmc-wbtn");
+ // element.classList.add("wgt-shine");
+</script>
 </body>
 
 </html>
