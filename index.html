@@ -32,7 +32,6 @@
 </head>
 
 <body>
-  <div id="body">
   <nav id='nav' style="width: 100vw; backdrop-filter: blur(5px); box-shadow: inset 0 -1px 0 0 hsla(0,0%,100%,0.1)">
     <div class="nav-container-custom nav-wrapper">
       <div class="brand">
@@ -133,7 +132,7 @@
     }
   </script>
 
-
+<div id="page-content">
 <script data-name="BMC-Widget" classList="shine" data-cfasync="false" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="Dhyan99" data-description="Support me on Buy me a coffee!" data-message="Support Me By Leaving A Small Donation" data-color="#5F7FFF" data-position="Left" data-x_margin="18" data-y_margin="18"></script>
 </div>
 
@@ -152,8 +151,9 @@
   <script src="assets/js/script.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+  
     $(document).ready(function(){ 
-    $('#body').load("index.html", function(){
+    $('#page-content').load("index.html", function(){
        $('#bmc-wbtn').addClass('wgt-shine')
     });
 }); 
