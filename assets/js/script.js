@@ -7,7 +7,7 @@ window.addEventListener('scroll', e => {
                 const nav-links = document.getElementsById('nav-links')
 		nav.style.backgroundColor = 'rgba(0,0,0,0.5)'
 		nav.style.backdropFilter = 'blur(5px)'
-                nav-links.style.float = 'Left'
+                nav-links.style.float = 'Right'
 	} else {
 		nav.style.boxShadow = 'inset 0 -1px 0 0 hsla(0,0%,100%,0.1)'
 		nav.style.backgroundColor = 'transparent'
