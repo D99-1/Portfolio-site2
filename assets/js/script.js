@@ -4,10 +4,8 @@ AOS.init();
 window.addEventListener('scroll', e => {
 	if (document.documentElement.scrollTop > 20) {
 		const nav = document.getElementById('nav')
-                const nav-links = document.getElementsById('nav-links')
 		nav.style.backgroundColor = 'rgba(0,0,0,0.5)'
 		nav.style.backdropFilter = 'blur(5px)'
-                nav-links.style.float = 'Right'
 	} else {
 		nav.style.boxShadow = 'inset 0 -1px 0 0 hsla(0,0%,100%,0.1)'
 		nav.style.backgroundColor = 'transparent'
