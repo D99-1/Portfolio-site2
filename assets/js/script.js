@@ -7,6 +7,7 @@ window.addEventListener('scroll', e => {
 		nav.style.backgroundColor = 'rgba(0,0,0,0.5)'
 		nav.style.backdropFilter = 'blur(5px)'
 	} else {
+		document.getElementById("nav-wrapper").className = "nav-wrapper-custom";
 		nav.style.boxShadow = 'inset 0 -1px 0 0 hsla(0,0%,100%,0.1)'
 		nav.style.backgroundColor = 'transparent'
 	}
@@ -65,7 +66,9 @@ projects.forEach((project) => {
 `
 
 <div class="card" id="${project.name}" onClick="clicked(this)">
-  <label for="collapsible" class="lbl-toggle">${project.name}</label>
+<div class="row-div">
+  <label for="collapsible" class="lbl-toggle">${project.name}<i class="fa-solid fa-caret-right"></i></label>
+  </div>
   </div>
 
 `
@@ -77,7 +80,7 @@ function clicked(elem){
 	let extended = `
 	<div class="card-content" id="${rawData.name}-unCollapsed">
 	<div style="display="flex"; flex-direction="row"">
-	<h3 class="card-heading">${rawData.name} </h3>
+	<h3 class="card-heading">${rawData.name} <i class="fa-solid fa-caret-down"></i></h3>
 	</div>
 	<p class="card-description">${rawData.description}</p>
 	<div class="buttons">
@@ -86,7 +89,7 @@ function clicked(elem){
 	</div>
   `
   let short = `
-	<label for="collapsible" class="lbl-toggle">${rawData.name}</label>
+	<label for="collapsible" class="lbl-toggle">${rawData.name} <i class="fa-solid fa-caret-right"></i></label>
   `
   const uncollap = document.getElementById(`${rawData.name}-unCollapsed`)
 	if (uncollap){
@@ -176,3 +179,45 @@ var typing=new Typed(".typing-text", {
   backDelay: 500,
 
 });
+
+
+// Active Menu Highlight
+const highlightMenu = () => {
+  const activeElement = document.querySelector(".highlight-nav");
+  const homeMenu = document.querySelector("#home-nav");
+  const aboutMenu = document.querySelector("#about-nav");
+  const projectsMenu = document.querySelector("#projects-nav");
+
+  let scrollPos = window.scrollY;
+  if (window.innerWidth > 960 && scrollPos < 654.39) {
+	homeMenu.classList.remove("unhighlight-nav")
+    homeMenu.classList.add("highlight-nav");
+    aboutMenu.classList.add("unhighlight-nav");
+	setTimeout(() =>{homeMenu.classList.add("unhighlight-nav");},5000)
+    return;
+  } else if (window.innerWidth > 960 && scrollPos < 1370) {
+	aboutMenu.classList.remove("unhighlight-nav")
+    aboutMenu.classList.add("highlight-nav");
+    homeMenu.classList.add("unhighlight-nav");
+    projectsMenu.classList.add("unhighlight-nav");
+	setTimeout(() =>{aboutMenu.classList.add("unhighlight-nav");},5000)
+
+    return;
+  } else if (window.innerWidth > 960 && scrollPos < 20000) {
+	projectsMenu.classList.remove("unhighlight-nav")
+    projectsMenu.classList.add("highlight-nav");
+    aboutMenu.classList.add("unhighlight-nav");
+	setTimeout(() =>{projectsMenu.classList.add("unhighlight-nav");},5000)
+    return;
+  } 
+
+  if (
+    (activeElement && window.innerWidth < 960 && scrollPos < 600) ||
+    activeElement
+  ) {
+    activeElement.classList.add("unhighlight-nav");
+  }
+};
+
+window.addEventListener("scroll", highlightMenu);
+window.addEventListener("click", highlightMenu);

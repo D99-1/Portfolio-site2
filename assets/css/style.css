@@ -27,6 +27,7 @@ nav {
 	height: 80px;
 }
 
+
 .nav-list li a {
 	font-family: Grotesk, sans-serif !important;
 }
@@ -43,6 +44,11 @@ nav {
     -ms-user-select: none;
     user-select: none;
 }
+.highlight-nav:hover {
+  border-bottom: 5px solid #FFF;
+
+}
+
 html{
   background: #000;
 }
@@ -152,6 +158,16 @@ body {
     z-index: -1;
     max-height: 100vh;
     overflow: hidden
+}
+.highlight-nav {
+  border-bottom: 5px solid #00DFD8;
+  transition: 1s;
+
+}
+
+.unhighlight-nav {
+  border-bottom: 0px solid #00DFD8 !important;
+  transition: 0.5 !important;
 }
 
 .icon {
@@ -417,6 +433,7 @@ body {
     margin: 30px 20px;
     transition: border 0.3s ease, transform 0.3s ease;
     flex: 1;
+    cursor: default;
   }
 .outer{
   transition:  height 5s linear;
@@ -434,10 +451,12 @@ body {
 
   .card:hover {
     border: 1px solid rgb(49,91,250);
+    cursor: default;
     transform: scale(1.1)
   }
   .card:active {
     border: 1px solid rgb(49,91,250);
+    cursor: default;
     transform: scale(1.1)
   }
 
@@ -681,9 +700,6 @@ footer{
   .m-project-content{
     display: block;
   }
-  .card {
-    cursor: pointer;
-}
 
 
 
